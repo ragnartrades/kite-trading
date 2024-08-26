@@ -1,0 +1,34 @@
+{
+  "user_type": "individual/res_no_nn",
+  "email": "subhramsubhrajyoti111@gmail.com",
+  "user_name": "Subhram Subhrajyoti Rana",
+  "user_shortname": "Subhram",
+  "broker": "ZERODHA",
+  "exchanges": [
+    "MF"
+  ],
+  "products": [
+    "CNC",
+    "NRML",
+    "MIS",
+    "BO",
+    "CO"
+  ],
+  "order_types": [
+    "MARKET",
+    "LIMIT",
+    "SL",
+    "SL-M"
+  ],
+  "avatar_url": null,
+  "user_id": "UNX844",
+  "api_key": "p7qy2u03ev8e45pm",
+  "access_token": "i81KMka35VDaSHty3t4LKVRBAbAM4iVM",
+  "public_token": "zDAz83BZlDLjhr44ypS3sYeKtVQvvY7R",
+  "refresh_token": "",
+  "enctoken": "wC7PuPyaFI9VS+jfoFu0yt+am+aN2ru4Si0ztV7JCnaekHd4wLw8YPHp/BOIGLLcysDvz/BTmOnNmBqdfK76+U4gauLNPx7nAutGSB2wLyC3CqpsYFpFBEyn1yEm83E=",
+  "login_time": "datetime.datetime(2024, 8, 23, 19, 36, 37)",
+  "meta": {
+    "demat_consent": "consent"
+  }
+}
