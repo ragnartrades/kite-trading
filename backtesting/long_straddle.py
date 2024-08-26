@@ -15,6 +15,8 @@ report_file_path = f'{backtesting_directory}/long_straddle_report.xlsx'
 max_time_for_entry = time(hour=12, minute=0, second=0)
 max_exit_time = time(hour=15, minute=10, second=0)
 current_stoploss = None
+
+
 # -----------------------------------------
 
 
@@ -245,8 +247,8 @@ def calculate_profit_metrics_report(report: Report):
     # https://docs.google.com/spreadsheets/d/1bCBxrJdEFFy6hx--zdVww4OmV13hS4C9jTj74z43PSY/edit?gid=1935620396#gid=1935620396
     tot_opt_qty = BackTestInput.LOT_SIZE * BackTestInput.LOT_QTY
     profit_per_unit_option = report['tot_price_difference_made']
-    report['tot_charges'] = 42.550717 + \
-                            (0.234258 * tot_opt_qty) + \
+    report['tot_charges'] = 2 * 42.550717 + \
+                            2 * (0.234258 * tot_opt_qty) + \
                             (0.109864 * profit_per_unit_option)  # APPROXIMATION
 
     tot_basic_profit = tot_opt_qty * report['tot_price_difference_made']
