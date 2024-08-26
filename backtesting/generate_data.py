@@ -18,9 +18,8 @@ data_folder_path = None
 
 
 class Input:
-    START_DATE_TIME = "2024-08-12 09:15:00"
-    END_DATE_TIME = "2024-08-12 15:30:00"
-    # END_DATE_TIME = "2024-08-02 15:30:00"
+    START_DATE_TIME = "2024-08-01 09:15:00"
+    END_DATE_TIME = "2024-08-25 15:30:00"
     INTERVAL = 'minute'
 
 

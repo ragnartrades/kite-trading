@@ -122,6 +122,7 @@ def write_result_to_report_file(report: List[Report]):
 
     # 3. write data to this file
     df = pd.DataFrame(report)
+    df.columns = [col.replace('_', ' ') for col in df.columns]
     for row in dataframe_to_rows(df, index=False, header=True):
         ws.append(row)
 
