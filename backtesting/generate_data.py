@@ -12,8 +12,8 @@ from common import utils, configs
 kc: KiteConnect = utils.get_kite_connect_client()
 
 # global variables, will be set after 'fresh_create_file_folders()' function is called
-backtesting_directory = None
-data_folder_path = None
+backtesting_directory = "/Users/Subhram/my-projects/kite-trading/backtesting"
+data_folder_path = f"{backtesting_directory}/data"
 # -----------------------------
 
 
@@ -201,12 +201,15 @@ def generate_banknifty_data_for_all_dates():
 
 
 def generate_banknifty_data_for_specific_date(today: date):
-    print(f'fetching banknifty candlestick data from kite. '
+    today_str = today.strftime('%Y-%m-%d')
+
+    print(f'fetching banknifty candlestick data from kite for {today_str} '
           f'instrument token: {BankNiftyDataInput.INSTRUMENT_TOKEN}')
+
     bank_nifty_candlestick_data = kc.historical_data(
         instrument_token=BankNiftyDataInput.INSTRUMENT_TOKEN,
-        from_date=BankNiftyDataInput.START_DATE_TIME,
-        to_date=BankNiftyDataInput.END_DATE_TIME,
+        from_date=today_str,
+        to_date=today_str,
         interval=BankNiftyDataInput.INTERVAL,
     )
     for candlestick in bank_nifty_candlestick_data:
@@ -215,10 +218,8 @@ def generate_banknifty_data_for_specific_date(today: date):
     target_file_path = get_target_file_path_from_date(today)
     sheet_name = 'BANKNIFTY'
 
-    print(f'writing banknifty candle stick data to target file: {target_file_path}'
-          f' and sheet: {sheet_name}')
-    write_candlestick_data_to_target_file_and_sheet(bank_nifty_candlestick_data,
-                                                    target_file_path, sheet_name)
+    write_banknifty_candlestick_data_to_target_file_and_sheet(bank_nifty_candlestick_data,
+                                                              target_file_path, sheet_name)
 
 
 def get_target_file_path_from_date(cur_date: date) -> str:
@@ -231,23 +232,26 @@ def get_target_file_path_from_date(cur_date: date) -> str:
     return target_file_path
 
 
-def write_candlestick_data_to_target_file_and_sheet(
+def write_banknifty_candlestick_data_to_target_file_and_sheet(
         bank_nifty_candlestick_data: List[dict],
         target_file_path: str,
         sheet_name: str,
 ):
+    print(f'writing banknifty candle stick data to target file: {target_file_path}'
+          f' and sheet: {sheet_name}')
+
     df = pd.DataFrame(bank_nifty_candlestick_data)
 
     wb = openpyxl.load_workbook(target_file_path)
 
-    # Check if the sheet name already exists, and if so, remove it
-    if sheet_name in wb.sheetnames:
-        std = wb[sheet_name]
-        wb.remove(std)
-
     # Remove the default sheet if it exists
     if "Sheet" in wb.sheetnames:
         std = wb["Sheet"]
+        wb.remove(std)
+
+    # Remove the target sheet if it exists
+    if sheet_name in wb.sheetnames:
+        std = wb[sheet_name]
         wb.remove(std)
 
     ws = wb.create_sheet(title=sheet_name)
@@ -256,6 +260,33 @@ def write_candlestick_data_to_target_file_and_sheet(
         ws.append(row)
 
     wb.save(target_file_path)
+    wb.close()
+
+
+def write_all_options_candlestick_data_to_target_file_for_specific_date(
+        day: date,
+        all_options_data_for_specific_date: dict,
+):
+    day_str = day.strftime('%Y-%m-%d')
+
+    print(f'-----INFO----- writing all options data for {day_str} ...')
+
+    target_file_path = get_target_file_path_from_date(day)
+    wb = openpyxl.load_workbook(target_file_path)
+
+    for option_symbol, candlestick_arr in all_options_data_for_specific_date.items():
+        print(f'writing option data for {day_str} and {option_symbol} ...')
+
+        sheet_name = option_symbol
+        ws = wb.create_sheet(title=sheet_name)
+        df = pd.DataFrame(candlestick_arr)
+        for row in dataframe_to_rows(df, index=False, header=True):
+            ws.append(row)
+
+    wb.save(target_file_path)
+    wb.close()
+
+    print(f'-----INFO----- successfully written  all options data for {day_str} !!!')
 
 
 def generate_options_data_for_all_dates_for_all_options():
@@ -266,44 +297,77 @@ def generate_options_data_for_all_dates_for_all_options():
 
     current_date_time = my_start_date_time
     while current_date_time.date() <= my_end_date_time.date():
-        generate_options_data_for_specific_date_for_all_options(current_date_time.date())
+        all_options_data_for_specific_date = \
+            generate_options_data_for_specific_date_for_all_options(current_date_time.date())
+
+        write_all_options_candlestick_data_to_target_file_for_specific_date(
+            current_date_time.date(),
+            all_options_data_for_specific_date,
+        )
 
         current_date_time += timedelta(days=1)
 
 
 def generate_options_data_for_specific_date_for_all_options(today: date):
+    """Steps
+    1. fetch all possible option instruments candlestick data for a specific date
+    2. Write once to that day's xlsx file for all options"""
+
+    # {
+    #     'BANKNIFTY24AUG51000CE': [
+    #         {OPEN, LOW, ....},
+    #         {OPEN, LOW, ....},
+    #     ],
+    #     'BANKNIFTY24AUG51600PE': [
+    #         {OPEN, LOW, ....},
+    #         {OPEN, LOW, ....},
+    #     ]
+    # }
+    candlestick_for_specific_date_for_all_options = {}
+
     for option_instrument_token, option_instrument_data in OptionDataInput.INSTRUMENT_TOKENS.items():
-        generate_options_data_for_specific_date_for_specific_option(
-            today,
-            option_instrument_data,
-        )
+        candlestick_for_specific_date_for_specific_option = \
+            fetch_options_data_for_specific_date_for_specific_option(
+                today,
+                option_instrument_data,
+            )
+
+        candlestick_for_specific_date_for_all_options[option_instrument_data['trading_symbol']] = \
+            candlestick_for_specific_date_for_specific_option
+
+    return candlestick_for_specific_date_for_all_options
 
 
-def generate_options_data_for_specific_date_for_specific_option(
-        today: date,
-        option_instrument_data: dict,
-):
-    print(f'fetching banknifty option candlestick data from kite. '
-          f'instrument token: {option_instrument_data['instrument_token']}, '
-          f'trading symbol: {option_instrument_data['trading_symbol']}')
+def fetch_options_data_for_specific_date_for_specific_option(
+    today: date,
+    option_instrument_data: dict,
+) -> List:
+    """Returns:
+    [
+        {OPEN, LOW, ....},
+        {OPEN, LOW, ....},
+    ]
+    """
+
+    today_str = today.strftime('%Y-%m-%d')
+
+    print(f'fetching banknifty option candlestick data from kite for {today_str}'
+          f' instrument token: {option_instrument_data['instrument_token']},'
+          f' trading symbol: {option_instrument_data['trading_symbol']}')
+
+    start_date_time_str = f'{today_str} 09:15:00'
+    end_date_time_str = f'{today_str} 15:30:00'
 
     bank_nifty_option_candlestick_data = kc.historical_data(
         instrument_token=option_instrument_data['instrument_token'],
-        from_date=BankNiftyDataInput.START_DATE_TIME,
-        to_date=BankNiftyDataInput.END_DATE_TIME,
+        from_date=start_date_time_str,
+        to_date=end_date_time_str,
         interval=BankNiftyDataInput.INTERVAL,
     )
     for candlestick in bank_nifty_option_candlestick_data:
         candlestick['date'] = candlestick['date'].strftime("%Y-%m-%d %H:%M:%S")
 
-    target_file_path = get_target_file_path_from_date(today)
-    sheet_name = option_instrument_data['trading_symbol']
-
-    print(f'writing banknifty option candle stick data to target file: {target_file_path}'
-          f' and sheet: {sheet_name}')
-
-    write_candlestick_data_to_target_file_and_sheet(bank_nifty_option_candlestick_data,
-                                                    target_file_path, sheet_name)
+    return bank_nifty_option_candlestick_data
 
 
 if __name__ == '__main__':

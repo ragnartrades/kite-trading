@@ -30,8 +30,8 @@ class CandleStick(TypedDict):
 
 
 class BackTestInput:
-    START_DATE = datetime.strptime("2024-08-12", "%Y-%m-%d").date()
-    END_DATE = datetime.strptime("2024-08-12", "%Y-%m-%d").date()
+    START_DATE = datetime.strptime("2024-08-01", "%Y-%m-%d").date()
+    END_DATE = datetime.strptime("2024-08-25", "%Y-%m-%d").date()
     LOT_SIZE = 15
     LOT_QTY = 1
     ENTRY_DEVIATION = 5
@@ -144,7 +144,6 @@ def get_long_straddle_dry_run_result_on_specific_date(day: date) -> Report:
     report: Report = Report(
         date=day.strftime("%Y-%m-%d"),
         lot_size=BackTestInput.LOT_SIZE,
-        lot_qty=BackTestInput.LOT_QTY,
     )
 
     source_data_file_path: str = get_source_data_file_path_from_date(day)
@@ -153,6 +152,15 @@ def get_long_straddle_dry_run_result_on_specific_date(day: date) -> Report:
 
     # populate basic info
     df = pd.read_excel(source_data_file_path, sheet_name='BANKNIFTY')
+
+    # check if  this is not a trading day
+    num_rows = df.shape[0]
+    if num_rows == 0:
+        return report
+
+    report['lot_size'] = BackTestInput.LOT_SIZE
+    report['lot_qty'] = BackTestInput.LOT_QTY
+
     for row_num, data in df.iterrows():
         open: float = data['open']
         if 'market_opening_banknifty_point' not in report:
