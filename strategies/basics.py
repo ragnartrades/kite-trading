@@ -7,7 +7,7 @@ from common.utils import place_order
 
 def basics():
 
-    kc: KiteConnect = utils.get_kite_connect_client()
+    kc: KiteConnect = utils.new_kite_connect_client()
 
     utils.update_nse_instruments(kc)
     utils.update_nfo_instruments(kc)

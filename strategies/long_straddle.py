@@ -2,6 +2,7 @@ import json
 import threading
 import time
 from enum import Enum
+from common.constants import *
 from kiteconnect import KiteConnect, KiteTicker
 from common import utils, configs
 from typing import TypedDict
@@ -71,7 +72,7 @@ def START_LONG_STRADDLE():
     global kc
     global current_trade_state
 
-    kc = utils.get_kite_connect_client()
+    kc = utils.new_kite_connect_client()
 
     fetch_and_load_necessary_data(kc)
 
@@ -103,7 +104,7 @@ def fetch_and_load_necessary_data(kc: KiteConnect):
     nfo_instruments_data = utils.load_nfo_instruments_data()
 
     configs.NIFTY_BANK_INSTRUMENT_TOKEN = \
-        nse_instruments_data[configs.BANK_NIFTY_TRADING_SYMBOL]['instrument_token']
+        nse_instruments_data[BANK_NIFTY_TRADING_SYMBOL]['instrument_token']
 
 
 def async_fetch_bank_nifty_ltp():
@@ -112,7 +113,7 @@ def async_fetch_bank_nifty_ltp():
 
 
 def fetch_bank_nifty_ltp():
-    kws: KiteTicker = utils.get_kite_websocket_client()
+    kws: KiteTicker = utils.new_kite_websocket_client()
 
     kws.on_connect = set_bank_nifty_instrument_for_ltp_fetch
     kws.on_ticks = update_bank_nifty_ltp
@@ -143,7 +144,7 @@ def async_fetch_ATM_PE_CE_ltp():
 
 
 def fetch_ATM_PE_CE_ltp():
-    kws: KiteTicker = utils.get_kite_websocket_client()
+    kws: KiteTicker = utils.new_kite_websocket_client()
     kws.on_connect = set_ATM_CE_PE_instruments_for_price_fetch
     kws.on_ticks = update_ce_pe_ltp
     kws.on_close = on_close

@@ -3,13 +3,7 @@ API_SECRETE = '4pamm45xsirewovl8smza5t1qvft0t92'
 DEBUG = False
 ACCESS_TOKEN = None  # This wil be set after successful login
 
-BANK_NIFTY_TRADING_SYMBOL = "NIFTY BANK"
-NIFTY_BANK_INSTRUMENT_TOKEN = None  # This will be loaded from the NSE_instruments.json file
-BANK_NIFTY_LOT_SIZE = 15
+LONG_STRADDLE_SL_TRAILING_POINT_DIFF = 10  # todo: replace from here to straddle config file
+LONG_STRADDLE_MIN_PROFIT_PERCENTAGE = 3  # todo: replace from here to straddle config file
+LONG_STRADDLE_LOT_QTY = 1  # todo: replace from here to straddle config file
 
-LONG_STRADDLE_SL_TRAILING_POINT_DIFF = 10
-LONG_STRADDLE_MIN_PROFIT_PERCENTAGE = 3
-LONG_STRADDLE_LOT_QTY = 1
-
-BANKNIFTY_2024_PREFIX = "BANKNIFTY24"
-TRADING_MONTH = "SEP"

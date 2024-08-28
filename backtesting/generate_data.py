@@ -9,7 +9,7 @@ from typing import List
 from kiteconnect import KiteConnect
 from common import utils, configs
 
-kc: KiteConnect = utils.get_kite_connect_client()
+kc: KiteConnect = utils.new_kite_connect_client()
 
 # global variables, will be set after 'fresh_create_file_folders()' function is called
 backtesting_directory = "/Users/Subhram/my-projects/kite-trading/backtesting"

@@ -2,7 +2,9 @@ import json
 from datetime import date, datetime
 from kiteconnect import KiteConnect, KiteTicker
 from common import configs
+from . import constants as common_constants
 from typing import TypedDict
+from .data import Data
 
 
 MONTH_NUMBER_TO_OPTION_MONTH_SYMBOL_MAP = {
@@ -21,7 +23,7 @@ MONTH_NUMBER_TO_OPTION_MONTH_SYMBOL_MAP = {
 }
 
 
-def get_kite_connect_client() -> KiteConnect:
+def new_kite_connect_client() -> KiteConnect:
     kc: KiteConnect = KiteConnect(
         api_key=configs.API_KEY,
         debug=configs.DEBUG,
@@ -45,7 +47,7 @@ def get_kite_connect_client() -> KiteConnect:
     return kc
 
 
-def get_kite_websocket_client() -> KiteTicker:
+def new_kite_websocket_client() -> KiteTicker:
     if configs.ACCESS_TOKEN is None:
         err_msg = ('access_token is not initialised. Please connect to kite connect first with'
                    ' "get_kite_connect_client()" function, and then try to create websocket client')
@@ -144,3 +146,14 @@ def load_nse_instruments_data() -> dict:
         data_dict = json.load(file)
 
     return data_dict
+
+
+def fetch_and_load_NSE_and_NFO_instruments(kc: KiteConnect):
+    update_nse_instruments(kc)
+    update_nfo_instruments(kc)
+
+    Data.nse_instruments = load_nse_instruments_data()
+    Data.nfo_instruments = load_nfo_instruments_data()
+
+    common_constants.NIFTY_BANK_INSTRUMENT_TOKEN = \
+        Data.nse_instruments[common_constants.BANK_NIFTY_TRADING_SYMBOL]['instrument_token']
