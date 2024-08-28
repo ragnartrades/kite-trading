@@ -35,7 +35,7 @@ class BackTestInput:
     LOT_SIZE = 15
     LOT_QTY = 1
     ENTRY_DEVIATION = 5
-    MIN_PROFIT_PERCENTAGE = 3
+    MIN_PROFIT_PERCENTAGE = 2
     SL_DEVIATION = 10
 
 
@@ -427,7 +427,7 @@ def entry_possible(
     elif entry_possible_for_upper_bound_strike_price(high, upper_bound_strike_price):
         return True, upper_bound_strike_price, upper_bound_strike_price - BackTestInput.ENTRY_DEVIATION
 
-    return False, None
+    return False, None, None
 
 
 def entry_possible_for_lower_bound_strike_price(
