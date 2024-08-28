@@ -2,10 +2,10 @@ from strategies.long_straddle.order_manager.interface import IOrderManager
 
 
 class RealOrderManager(IOrderManager):
-    def buy(self):
+    def buy(self, instrument_token: int, qty: int):
         pass
 
-    def sell(self):
+    def sell(self, instrument_token: int, qty: int):
         pass
 
 

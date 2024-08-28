@@ -14,7 +14,6 @@ class TradingState(Enum):
 
 
 class LiveInfo:
-    stock_symbol: None
     date: None
 
     lot_size = None
@@ -67,5 +66,5 @@ class LiveInfo:
     @classmethod
     def charges(cls) -> float:  # APPROXIMATION
         return 2 * 42.550717 + \
-            2 * (0.234258 * strategy_config.LOT_QTY * strategy_utils.get_stock_lot_size()) + \
+            2 * (0.234258 * LiveInfo.lot_qty * LiveInfo.lot_size) + \
             (0.109864 * cls.current_basic_profit())

@@ -8,6 +8,7 @@ from strategies.long_straddle.live_info import LiveInfo
 
 
 class TradeReport(TypedDict):
+    stock_symbol: str
     date: str
     lot_size: int
     lot_qty: int
@@ -41,6 +42,7 @@ class TradeReportHandler:
     def generate_report(cls) -> TradeReport:
         report = TradeReport()
 
+        report['stock_symbol'] = LiveInfo.stock_symbol
         report['date'] = LiveInfo.date.strftime("%Y-%m-%d")
         report['lot_size'] = LiveInfo.lot_size
         report['lot_qty'] = LiveInfo.lot_qty

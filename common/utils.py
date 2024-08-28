@@ -4,6 +4,8 @@ from kiteconnect import KiteConnect, KiteTicker
 from common import configs
 from . import constants as common_constants
 from typing import TypedDict
+
+from .constants import BANK_NIFTY_TRADING_SYMBOL, NIFTY_TRADING_SYMBOL
 from .data import Data
 
 
@@ -157,3 +159,24 @@ def fetch_and_load_NSE_and_NFO_instruments(kc: KiteConnect):
 
     common_constants.NIFTY_BANK_INSTRUMENT_TOKEN = \
         Data.nse_instruments[common_constants.BANK_NIFTY_TRADING_SYMBOL]['instrument_token']
+
+
+def get_stock_lot_size(stock_name: str) -> int:
+    if stock_name == 'BANKNIFTY':
+        return common_constants.BANK_NIFTY_LOT_SIZE
+    elif stock_name == 'NIFTY':
+        return common_constants.NIFTY_LOT_SIZE
+
+    raise Exception(f'Can not get lot size for invalid stock name: {stock_name}')
+
+
+def get_stock_trading_symbol_from_stock_name(stock_name: str):
+    if stock_name == 'BANKNIFTY':
+        return BANK_NIFTY_TRADING_SYMBOL
+    if stock_name == 'NIFTY':
+        return NIFTY_TRADING_SYMBOL
+
+
+def get_stock_token_from_stock_symbol(stock_symbol: str) -> int:
+    instrument = Data.nse_instruments['stock_symbol']
+    return instrument['instrument_token']

@@ -5,7 +5,8 @@ from strategies.long_straddle import kite_connect_client
 from .config import *
 from datetime import datetime
 from live_info import LiveInfo, TradingState
-
+from strategies.long_straddle import config as strategy_config
+from common import utils as common_util
 from strategies.long_straddle.processes.entry import async_spawn_make_entry_process
 from strategies.long_straddle.processes.exit import async_spawn_take_exit_process
 from strategies.long_straddle.processes.option_price import async_spawn_option_price_fetcher
@@ -24,13 +25,18 @@ def start_long_straddle_strategy():
     print('[MAIN_THREAD] : NSE and NFO instrument fetching ...')
     fetch_and_load_NSE_and_NFO_instruments()
 
+    print('[MAIN_THREAD] : populating initial live info ...')
+    populate_initial_live_info()
+
     print('[MAIN_THREAD] : async spwanning all processes ...')
     async_spawn_stock_price_fetcher()
     async_spawn_option_price_fetcher()
-    async_spawn_make_entry_process()
+
+    # spawnning processes in reverse dependencies
+    async_spawn_profit_report_maker()
     async_spawn_take_exit_process()
     async_spawn_stoploss_managing_process()
-    async_spawn_profit_report_maker()
+    async_spawn_make_entry_process()
 
     print('[MAIN_THREAD] : waiting for trade exit .')
     while LiveInfo.trading_state != TradingState.EXITED:
@@ -56,3 +62,11 @@ def initiate_new_kite_connect_client():
 
 def fetch_and_load_NSE_and_NFO_instruments():
     utils.fetch_and_load_NSE_and_NFO_instruments(kite_connect_client.kc)
+
+
+def populate_initial_live_info():
+    LiveInfo.date = datetime.today().date()
+    LiveInfo.lot_size = common_util.get_stock_lot_size(strategy_config.STOCK_NAME)
+    LiveInfo.lot_qty = strategy_config.LOT_QTY
+    LiveInfo.stock_symbol = common_util.get_stock_trading_symbol_from_stock_name(strategy_config.STOCK_NAME)
+    LiveInfo.stock_instrument_token = common_util.get_stock_token_from_stock_symbol(LiveInfo.stock_symbol)
