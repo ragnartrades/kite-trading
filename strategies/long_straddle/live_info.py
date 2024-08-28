@@ -2,6 +2,8 @@ from enum import Enum
 from . import config as strategy_config
 from common import constants as common_constants
 from . import utils as strategy_utils
+from .classes import TradeExitReason
+
 
 class TradingState(Enum):
     NOT_STARTED = 'NOT_STARTED'
@@ -12,6 +14,9 @@ class TradingState(Enum):
 
 
 class LiveInfo:
+    stock_symbol: None
+    date: None
+
     lot_size = None
     lot_qty = None
 
@@ -36,12 +41,17 @@ class LiveInfo:
     entry_ce_price = None
     entry_pe_price = None
     entry_tot_price = None  # entry_ce_price + entry_pe_price
+    tot_buying_value = None  # (entry_tot_price * lot_size * lot_qty)
+
+    strike_price = None
 
     exit_time = None
     exit_stock_price = None
     exit_ce_price = None
     exit_pe_price = None
     exit_tot_price = None  # exit_ce_price + exit_pe_price
+    tot_selling_value = None  # (exit_tot_price * lot_size * lot_qty)
+    exit_reason: TradeExitReason = None
 
     trading_state = TradingState.NOT_STARTED
 

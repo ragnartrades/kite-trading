@@ -1,3 +1,4 @@
+from strategies.long_straddle.classes import TradeExitReason
 from strategies.long_straddle.order_manager import get_new_order_manager
 from strategies.long_straddle.order_manager.interface import IOrderManager
 
@@ -9,7 +10,7 @@ class StraddlePositionManager:
     def MakeEntry(self):
         pass
 
-    def TakeExit(self):
+    def TakeExit(self, trade_exit_reason: TradeExitReason):
         pass
 
 
