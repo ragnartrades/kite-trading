@@ -12,8 +12,47 @@ def async_spawn_stoploss_managing_process():
     thread.start()
 
 
+def calculate_new_possible_stoploss() -> float:
+    return LiveInfo.tot_ce_pe_ltp - strategy_config.SL_DEVIATION
+
+
+def get_min_tot_ce_pe_price_for_min_profit(
+        entry_tot_price: float,
+        min_profit_percentage: float,
+) -> float:
+    return entry_tot_price * (1 + float(min_profit_percentage)/100)
+
+
+def try_setting_initial_Stoploss() -> bool:
+    if LiveInfo.entry_tot_price is None or LiveInfo.tot_ce_pe_ltp:
+        return False
+
+    min_ce_pe_price_for_min_profit: float = \
+        get_min_tot_ce_pe_price_for_min_profit(
+            LiveInfo.entry_tot_price,
+            strategy_config.MIN_PROFIT_PERCENTAGE,
+        )
+
+    sl_deviation_point: float = strategy_config.SL_DEVIATION
+
+    min_ce_pe_price_for_min_profit_after_sl_deviation = \
+        min_ce_pe_price_for_min_profit + sl_deviation_point
+
+    if LiveInfo.tot_ce_pe_ltp >= min_ce_pe_price_for_min_profit_after_sl_deviation:
+        LiveInfo.sl = min_ce_pe_price_for_min_profit
+        LiveInfo.trading_state = TradingState.SL_UPDATION_IN_PROGRESS
+
+        return True
+
+    return False
+
+
 def manage_stoploss():
     while LiveInfo.sl is None:
+        is_initial_sl_created: bool = try_setting_initial_Stoploss()
+        if is_initial_sl_created:
+            break
+
         time.sleep(1)
 
     while LiveInfo.trading_state != TradingState.EXITED:
@@ -23,12 +62,3 @@ def manage_stoploss():
         time.sleep(1)
 
 
-def calculate_new_possible_stoploss() -> float:
-    point_diff = None
-
-    if strategy_config.SL_DEVIATION_TYPE == 'ABSOLUTE':
-        point_diff = strategy_config.SL_DEVIATION
-    elif strategy_config.SL_DEVIATION_TYPE == 'PERCENTAGE':
-        point_diff = (LiveInfo.tot_ce_pe_ltp * strategy_config.SL_DEVIATION) / 100
-
-    return LiveInfo.tot_ce_pe_ltp - point_diff
