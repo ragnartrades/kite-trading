@@ -1,13 +1,14 @@
 import os
 from typing import TypedDict
 from strategies.long_straddle import config as strategy_config
-from openpyxl.utils.dataframe import dataframe_to_rows
-from openpyxl import Workbook
+from openpyxl import load_workbook
 import pandas as pd
 from strategies.long_straddle.live_info import LiveInfo
 
 
 class TradeReport(TypedDict):
+    """ IMPORTANT - DO NOT CHANGE THE SEQUENCE OF KEYS
+    They are as per in the report sheet"""
     stock_symbol: str
     date: str
     lot_size: int
@@ -74,30 +75,40 @@ class TradeReportHandler:
 
     @classmethod
     def write_report(cls, report: TradeReport):
+        # 1. Fetch the report file path
         report_file_path = cls.get_report_file_path()
 
         print(f'Started writing report to target file: {report_file_path} . . . ')
 
-        # 2. create a new one
-        wb = Workbook()
-        ws = wb.active
-        ws.title = 'report'  # Rename the default sheet to 'report'
+        # 2. Check if the file exists, if not raise an exception
+        if not os.path.exists(report_file_path):
+            raise FileNotFoundError(f'The file at {report_file_path} does not exist.')
 
-        # 3. write data to this file
-        df = pd.DataFrame(report)
-        df.columns = [col.replace('_', ' ') for col in df.columns]
-        for row in dataframe_to_rows(df, index=False):
+        try:
+            # 3. Open the file with write permission
+            wb = load_workbook(report_file_path)
+            ws = wb.active
+
+            # If the workbook is empty or needs initialization, create a new sheet
+            if ws.title != 'report':
+                ws.title = 'report'
+
+            # 4. Append a single row that is created from report dict
+            row = [report[col] for col in pd.DataFrame([report]).columns]
             ws.append(row)
 
-        # 4. Save the workbook to the specified path ands close
-        wb.save(report_file_path)
-        wb.close()
+            # 5. Save and close the file
+            wb.save(report_file_path)
+            wb.close()
 
-        print(f'Successfully saved report')
+            print(f'Successfully saved report')
+
+        except Exception as e:
+            print(f'Failed to save report: {e}')
 
     @classmethod
     def get_report_file_path(cls) -> str:
-        report_dir: str = os.path.join(os.getcwd(), 'strategies/long_straddle/long_straddle')
+        report_dir: str = os.path.join(os.getcwd(), 'strategies/long_straddle/reports')
 
         if strategy_config.SIMULATION_TYPE == 'REAL':
             return f'{report_dir}/real_report.xlsx'

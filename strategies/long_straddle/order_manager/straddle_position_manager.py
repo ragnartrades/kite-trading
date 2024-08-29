@@ -1,7 +1,9 @@
+import time
+
 from common.utils import MONTH_NUMBER_TO_OPTION_MONTH_SYMBOL_MAP
 from strategies.long_straddle.classes import TradeExitReason
 from strategies.long_straddle.config import STOCK_NAME
-from strategies.long_straddle.live_info import LiveInfo
+from strategies.long_straddle.live_info import LiveInfo, TradingState
 from strategies.long_straddle.order_manager import get_new_order_manager
 from strategies.long_straddle.order_manager.interface import IOrderManager
 from common.data import Data
@@ -30,6 +32,11 @@ class StraddlePositionManager:
         LiveInfo.ce_instrument_token = self.ce_instrument_token
         LiveInfo.pe_instrument_token = self.pe_instrument_token
 
+        # wait while LiveInfo.ce_ltp and LiveInfo.pe_ltp is not fetched
+        while LiveInfo.ce_ltp is None or LiveInfo.pe_ltp is None or \
+                LiveInfo.tot_ce_pe_ltp is None:
+            time.sleep(1)
+
         LiveInfo.strike_price = strike_price
         LiveInfo.entry_time = datetime.now().time()
         LiveInfo.entry_stock_price = LiveInfo.stock_ltp
@@ -37,6 +44,8 @@ class StraddlePositionManager:
         LiveInfo.entry_pe_price = LiveInfo.pe_ltp
         LiveInfo.entry_tot_price = LiveInfo.tot_ce_pe_ltp
         LiveInfo.tot_buying_value = LiveInfo.tot_ce_pe_ltp * LiveInfo.lot_size * LiveInfo.lot_qty
+
+        LiveInfo.trading_state = TradingState.LOOKING_FOR_INITIAL_SL
 
     def TakeExit(self, trade_exit_reason: TradeExitReason):
         self.order_manager.sell(self.ce_instrument_token, LiveInfo.lot_size * LiveInfo.lot_qty)
@@ -49,6 +58,8 @@ class StraddlePositionManager:
         LiveInfo.exit_tot_price = LiveInfo.tot_ce_pe_ltp
         LiveInfo.tot_selling_value = LiveInfo.tot_ce_pe_ltp * LiveInfo.lot_size * LiveInfo.lot_qty
         LiveInfo.exit_reason = trade_exit_reason
+
+        LiveInfo.trading_state = TradingState.EXITED
 
     @staticmethod
     def _get_instrument_symbol(strike_price: int, option_type: str) -> str:
@@ -64,7 +75,7 @@ class StraddlePositionManager:
 
     @staticmethod
     def _get_NFO_instrument_token_from_symbol(instrument_symbol: str) -> int:
-        instrument_data = Data.nfo_instruments['instrument_symbol']
+        instrument_data = Data.nfo_instruments[instrument_symbol]
         return instrument_data['instrument_token']
 
 

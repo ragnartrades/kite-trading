@@ -178,5 +178,5 @@ def get_stock_trading_symbol_from_stock_name(stock_name: str):
 
 
 def get_stock_token_from_stock_symbol(stock_symbol: str) -> int:
-    instrument = Data.nse_instruments['stock_symbol']
+    instrument = Data.nse_instruments[stock_symbol]
     return instrument['instrument_token']

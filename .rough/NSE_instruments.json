@@ -10065,20 +10065,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "MIRCELECTR": {
-        "instrument_token": 563713,
-        "exchange_token": "2202",
-        "tradingsymbol": "MIRCELECTR",
-        "name": "MIRC ELECTRONICS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "BIRET-RR": {
         "instrument_token": 563969,
         "exchange_token": "2203",
@@ -15119,20 +15105,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "GAYAHWS-BE": {
-        "instrument_token": 946945,
-        "exchange_token": "3699",
-        "tradingsymbol": "GAYAHWS-BE",
-        "name": "GAYATRI HIGHWAYS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "696KL34-SG": {
         "instrument_token": 947457,
         "exchange_token": "3701",
@@ -17877,20 +17849,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "LAKPRE-BZ": {
-        "instrument_token": 1222145,
-        "exchange_token": "4774",
-        "tradingsymbol": "LAKPRE-BZ",
-        "name": "LAKSHMI PRE SCRE",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "704RJ36-SG": {
         "instrument_token": 1223681,
         "exchange_token": "4780",
@@ -18713,20 +18671,6 @@
         "strike": 0.0,
         "tick_size": 0.01,
         "lot_size": 100,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "GOENKA-BZ": {
-        "instrument_token": 1282561,
-        "exchange_token": "5010",
-        "tradingsymbol": "GOENKA-BZ",
-        "name": "GOENKA DIAMOND&JEWELS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
         "exchange": "NSE"
@@ -20299,20 +20243,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "497AS24-SG": {
-        "instrument_token": 1413889,
-        "exchange_token": "5523",
-        "tradingsymbol": "497AS24-SG",
-        "name": "SDL AS 4.97% 2024",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 100,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "628GJ27-SG": {
         "instrument_token": 1414145,
         "exchange_token": "5524",
@@ -21242,20 +21172,6 @@
         "exchange_token": "5782",
         "tradingsymbol": "MASPTOP50",
         "name": "MIRAEAMC - MASPTOP50",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "BKMINDST-BZ": {
-        "instrument_token": 1481985,
-        "exchange_token": "5789",
-        "tradingsymbol": "BKMINDST-BZ",
-        "name": "BKM INDUSTRIES",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -22665,20 +22581,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "PREMIER-BE": {
-        "instrument_token": 1599489,
-        "exchange_token": "6248",
-        "tradingsymbol": "PREMIER-BE",
-        "name": "PREMIER",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "DKEGL-SM": {
         "instrument_token": 1599745,
         "exchange_token": "6249",
@@ -22689,20 +22591,6 @@
         "strike": 0.0,
         "tick_size": 0.05,
         "lot_size": 1500,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "RAJVIR-BZ": {
-        "instrument_token": 1602305,
-        "exchange_token": "6259",
-        "tradingsymbol": "RAJVIR-BZ",
-        "name": "RAJVIR INDUSTRIES",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
         "exchange": "NSE"
@@ -23953,6 +23841,20 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
+    "MIRCELECTR-BE": {
+        "instrument_token": 1754369,
+        "exchange_token": "6853",
+        "tradingsymbol": "MIRCELECTR-BE",
+        "name": "MIRCELECTR-DEPO",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
     "DHRUV-BE": {
         "instrument_token": 1756161,
         "exchange_token": "6860",
@@ -24975,20 +24877,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "ZODIAC": {
-        "instrument_token": 1825025,
-        "exchange_token": "7129",
-        "tradingsymbol": "ZODIAC",
-        "name": "ZODIAC ENERGY",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.05,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "759GS2029-GS": {
         "instrument_token": 1825281,
         "exchange_token": "7130",
@@ -25012,6 +24900,20 @@
         "expiry": "",
         "strike": 0.0,
         "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "ZODIAC-BE": {
+        "instrument_token": 1827329,
+        "exchange_token": "7138",
+        "tradingsymbol": "ZODIAC-BE",
+        "name": "ZODIAC ENERGY",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.05,
         "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
@@ -25339,10 +25241,10 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "JETFREIGHT": {
-        "instrument_token": 1846017,
-        "exchange_token": "7211",
-        "tradingsymbol": "JETFREIGHT",
+    "JETFREIGHT-BE": {
+        "instrument_token": 1846529,
+        "exchange_token": "7213",
+        "tradingsymbol": "JETFREIGHT-BE",
         "name": "JET FREIGHT LOGISTICS",
         "last_price": 0.0,
         "expiry": "",
@@ -29525,20 +29427,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "BLUECOAST-BE": {
-        "instrument_token": 2189313,
-        "exchange_token": "8552",
-        "tradingsymbol": "BLUECOAST-BE",
-        "name": "BLUE COAST HOTELS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "COOLCAPS-SM": {
         "instrument_token": 2191361,
         "exchange_token": "8560",
@@ -30379,20 +30267,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "MEP-BE": {
-        "instrument_token": 2247425,
-        "exchange_token": "8779",
-        "tradingsymbol": "MEP-BE",
-        "name": "MEP INFRA. DEVELOPERS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "KRISHNADEF-ST": {
         "instrument_token": 2249985,
         "exchange_token": "8789",
@@ -30850,20 +30724,6 @@
         "expiry": "",
         "strike": 0.0,
         "tick_size": 0.05,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "VCL-BE": {
-        "instrument_token": 2310913,
-        "exchange_token": "9027",
-        "tradingsymbol": "VCL-BE",
-        "name": "VAXTEX COTFAB",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
         "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
@@ -31452,20 +31312,6 @@
         "expiry": "",
         "strike": 0.0,
         "tick_size": 0.05,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "QUINTEGRA-BE": {
-        "instrument_token": 2400257,
-        "exchange_token": "9376",
-        "tradingsymbol": "QUINTEGRA-BE",
-        "name": "QUINTEGRA SOLUTIONS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
         "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
@@ -34173,20 +34019,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "UNIVAFOODS-BE": {
-        "instrument_token": 2653697,
-        "exchange_token": "10366",
-        "tradingsymbol": "UNIVAFOODS-BE",
-        "name": "UNIVA FOODS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "78GJ32A-SG": {
         "instrument_token": 2653953,
         "exchange_token": "10367",
@@ -36021,20 +35853,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "SEYAIND-BE": {
-        "instrument_token": 2774017,
-        "exchange_token": "10836",
-        "tradingsymbol": "SEYAIND-BE",
-        "name": "SEYA INDUSTRIES",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "77TN42-SG": {
         "instrument_token": 2776065,
         "exchange_token": "10844",
@@ -36973,20 +36791,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "GFSTEELS-BE": {
-        "instrument_token": 2836225,
-        "exchange_token": "11079",
-        "tradingsymbol": "GFSTEELS-BE",
-        "name": "GRAND FOUNDRY",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "LIBAS": {
         "instrument_token": 2836993,
         "exchange_token": "11082",
@@ -37528,20 +37332,6 @@
         "expiry": "",
         "strike": 0.0,
         "tick_size": 0.05,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "RADAAN-BE": {
-        "instrument_token": 2884609,
-        "exchange_token": "11268",
-        "tradingsymbol": "RADAAN-BE",
-        "name": "RADAAN MEDIAWORKS (I)",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
         "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
@@ -38191,20 +37981,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "BGLOBAL-BZ": {
-        "instrument_token": 2910977,
-        "exchange_token": "11371",
-        "tradingsymbol": "BGLOBAL-BZ",
-        "name": "BHARATIYA GLOBAL INFO",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "BIOCON": {
         "instrument_token": 2911489,
         "exchange_token": "11373",
@@ -38681,20 +38457,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "JPASSOCIAT-BE": {
-        "instrument_token": 2934017,
-        "exchange_token": "11461",
-        "tradingsymbol": "JPASSOCIAT-BE",
-        "name": "JAIPRAKASH ASSOCIATES",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "QMSMEDI-SM": {
         "instrument_token": 2935553,
         "exchange_token": "11467",
@@ -38891,10 +38653,10 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "CENTEXT": {
-        "instrument_token": 2946817,
-        "exchange_token": "11511",
-        "tradingsymbol": "CENTEXT",
+    "CENTEXT-BE": {
+        "instrument_token": 2947073,
+        "exchange_token": "11512",
+        "tradingsymbol": "CENTEXT-BE",
         "name": "CENTURY EXTRUSIONS",
         "last_price": 0.0,
         "expiry": "",
@@ -42839,20 +42601,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "RCOM-BE": {
-        "instrument_token": 3376129,
-        "exchange_token": "13188",
-        "tradingsymbol": "RCOM-BE",
-        "name": "RELIANCE COMMUNICATIONS L",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "ENIL": {
         "instrument_token": 3377153,
         "exchange_token": "13192",
@@ -43287,20 +43035,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "VISASTEEL-BE": {
-        "instrument_token": 3404289,
-        "exchange_token": "13298",
-        "tradingsymbol": "VISASTEEL-BE",
-        "name": "VISA STEEL",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "NITCO": {
         "instrument_token": 3404801,
         "exchange_token": "13300",
@@ -43483,20 +43217,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "SGL": {
-        "instrument_token": 3421953,
-        "exchange_token": "13367",
-        "tradingsymbol": "SGL",
-        "name": "STL GLOBAL",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "758JH31-SG": {
         "instrument_token": 3422209,
         "exchange_token": "13368",
@@ -43521,6 +43241,20 @@
         "strike": 0.0,
         "tick_size": 0.01,
         "lot_size": 100,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "SGL-BE": {
+        "instrument_token": 3422721,
+        "exchange_token": "13370",
+        "tradingsymbol": "SGL-BE",
+        "name": "STL GLOBAL",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
         "exchange": "NSE"
@@ -44258,20 +43992,6 @@
         "exchange_token": "13511",
         "tradingsymbol": "MUNJALAU",
         "name": "MUNJAL AUTO IND.",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "OMKARCHEM-BZ": {
-        "instrument_token": 3459841,
-        "exchange_token": "13515",
-        "tradingsymbol": "OMKARCHEM-BZ",
-        "name": "OMKAR SPL CHEM",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -47977,20 +47697,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "ORIENTALTL": {
-        "instrument_token": 3672577,
-        "exchange_token": "14346",
-        "tradingsymbol": "ORIENTALTL",
-        "name": "ORIENTAL TRIMEX",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "769WB42-SG": {
         "instrument_token": 3672833,
         "exchange_token": "14347",
@@ -48015,6 +47721,20 @@
         "strike": 0.0,
         "tick_size": 0.01,
         "lot_size": 100,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "ORIENTALTL-BE": {
+        "instrument_token": 3673601,
+        "exchange_token": "14350",
+        "tradingsymbol": "ORIENTALTL-BE",
+        "name": "ORIENTAL TRIMEX",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
         "exchange": "NSE"
@@ -49377,20 +49097,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "FSC-BZ": {
-        "instrument_token": 3744769,
-        "exchange_token": "14628",
-        "tradingsymbol": "FSC-BZ",
-        "name": "FUTURE SUPP CHAIN SOL",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "SANCO-BZ": {
         "instrument_token": 3745281,
         "exchange_token": "14630",
@@ -49783,20 +49489,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "GUJAPOLLO": {
-        "instrument_token": 3757313,
-        "exchange_token": "14677",
-        "tradingsymbol": "GUJAPOLLO",
-        "name": "GUJ. APOLLO IND.",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.05,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "965SCFL25-AB": {
         "instrument_token": 3757569,
         "exchange_token": "14678",
@@ -49806,6 +49498,20 @@
         "expiry": "",
         "strike": 0.0,
         "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "GUJAPOLLO-BE": {
+        "instrument_token": 3758337,
+        "exchange_token": "14681",
+        "tradingsymbol": "GUJAPOLLO-BE",
+        "name": "GUJ. APOLLO IND.",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.05,
         "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
@@ -49881,11 +49587,11 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "NAGREEKEXP": {
-        "instrument_token": 3763713,
-        "exchange_token": "14702",
-        "tradingsymbol": "NAGREEKEXP",
-        "name": "NAGREEKA EXPORTS",
+    "965SCL28-AK": {
+        "instrument_token": 3764225,
+        "exchange_token": "14704",
+        "tradingsymbol": "965SCL28-AK",
+        "name": "",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -49895,11 +49601,11 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "965SCL28-AK": {
-        "instrument_token": 3764225,
-        "exchange_token": "14704",
-        "tradingsymbol": "965SCL28-AK",
-        "name": "",
+    "NAGREEKEXP-BE": {
+        "instrument_token": 3764481,
+        "exchange_token": "14705",
+        "tradingsymbol": "NAGREEKEXP-BE",
+        "name": "NAGREEKA EXPORTS",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -54263,10 +53969,10 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "RANEENGINE": {
-        "instrument_token": 4288257,
-        "exchange_token": "16751",
-        "tradingsymbol": "RANEENGINE",
+    "RANEENGINE-BE": {
+        "instrument_token": 4289281,
+        "exchange_token": "16755",
+        "tradingsymbol": "RANEENGINE-BE",
         "name": "RANE ENG VALVE",
         "last_price": 0.0,
         "expiry": "",
@@ -55542,20 +55248,6 @@
         "exchange_token": "17044",
         "tradingsymbol": "SHARIABEES",
         "name": "NIP IND ETF SHARIAH BEES",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "HINDNATGLS-BE": {
-        "instrument_token": 4364801,
-        "exchange_token": "17050",
-        "tradingsymbol": "HINDNATGLS-BE",
-        "name": "HIND NATL GLASS & IND",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -57175,20 +56867,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "RTNPOWER": {
-        "instrument_token": 4485121,
-        "exchange_token": "17520",
-        "tradingsymbol": "RTNPOWER",
-        "name": "RATTANINDIA POWER",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "902SCL26I-AW": {
         "instrument_token": 4485377,
         "exchange_token": "17521",
@@ -57203,11 +56881,11 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "MAHASTEEL": {
-        "instrument_token": 4486913,
-        "exchange_token": "17527",
-        "tradingsymbol": "MAHASTEEL",
-        "name": "MAHAMAYA STEEL INDS",
+    "RTNPOWER-BE": {
+        "instrument_token": 4486145,
+        "exchange_token": "17524",
+        "tradingsymbol": "RTNPOWER-BE",
+        "name": "RATTANINDIA POWER",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -57222,6 +56900,20 @@
         "exchange_token": "17528",
         "tradingsymbol": "948SCL26I-AX",
         "name": "",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "MAHASTEEL-BE": {
+        "instrument_token": 4487937,
+        "exchange_token": "17531",
+        "tradingsymbol": "MAHASTEEL-BE",
+        "name": "MAHAMAYA STEEL INDS",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -58393,20 +58085,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "MELSTAR-BZ": {
-        "instrument_token": 4595201,
-        "exchange_token": "17950",
-        "tradingsymbol": "MELSTAR-BZ",
-        "name": "MELSTAR INFORMATION TECH",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "CIFC26A-N9": {
         "instrument_token": 4595713,
         "exchange_token": "17952",
@@ -59504,20 +59182,6 @@
         "exchange_token": "18337",
         "tradingsymbol": "74RJ41-SG",
         "name": "SDL RJ 7.4% 2041",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 100,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "364D290824-TB": {
-        "instrument_token": 4695041,
-        "exchange_token": "18340",
-        "tradingsymbol": "364D290824-TB",
-        "name": "GOI TBILL 364D-29/08/24",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -63083,20 +62747,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "SICALLOG-BE": {
-        "instrument_token": 4976641,
-        "exchange_token": "19440",
-        "tradingsymbol": "SICALLOG-BE",
-        "name": "SICAL LOGISTICS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "CAPTRUST": {
         "instrument_token": 4978433,
         "exchange_token": "19447",
@@ -64021,53 +63671,11 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "COMPINFO-BZ": {
-        "instrument_token": 5035521,
-        "exchange_token": "19670",
-        "tradingsymbol": "COMPINFO-BZ",
-        "name": "COMPUAGE INFOCOM",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "PODDARHOUS-BZ": {
         "instrument_token": 5036033,
         "exchange_token": "19672",
         "tradingsymbol": "PODDARHOUS-BZ",
         "name": "PODDAR HOUSE & DVPT",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "GAYAPROJ-BZ": {
-        "instrument_token": 5036801,
-        "exchange_token": "19675",
-        "tradingsymbol": "GAYAPROJ-BZ",
-        "name": "GAYATRI PROJECTS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "CMICABLES-BZ": {
-        "instrument_token": 5037057,
-        "exchange_token": "19676",
-        "tradingsymbol": "CMICABLES-BZ",
-        "name": "CMI",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -69915,20 +69523,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "GANGOTRI-BZ": {
-        "instrument_token": 5346817,
-        "exchange_token": "20886",
-        "tradingsymbol": "GANGOTRI-BZ",
-        "name": "GANGOTRI TEXTILES",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "RBZJEWEL-BE": {
         "instrument_token": 5348609,
         "exchange_token": "20893",
@@ -71157,20 +70751,6 @@
         "strike": 0.0,
         "tick_size": 0.05,
         "lot_size": 800,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "SHEKHAWATI-BE": {
-        "instrument_token": 5401345,
-        "exchange_token": "21099",
-        "tradingsymbol": "SHEKHAWATI-BE",
-        "name": "SHEKHAWATI INDUSTRIES",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
         "exchange": "NSE"
@@ -73420,20 +73000,6 @@
         "exchange_token": "21741",
         "tradingsymbol": "775SIDBI27-N1",
         "name": "",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "EDUCOMP-BZ": {
-        "instrument_token": 5567233,
-        "exchange_token": "21747",
-        "tradingsymbol": "EDUCOMP-BZ",
-        "name": "EDUCOMP SOLUTIONS",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -81465,20 +81031,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "182D290824-TB": {
-        "instrument_token": 5858305,
-        "exchange_token": "22884",
-        "tradingsymbol": "182D290824-TB",
-        "name": "GOI TBILL 182D-29/08/24",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 100,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "364D270225-TB": {
         "instrument_token": 5858561,
         "exchange_token": "22885",
@@ -83635,20 +83187,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "VISESHINFO-BZ": {
-        "instrument_token": 5947905,
-        "exchange_token": "23234",
-        "tradingsymbol": "VISESHINFO-BZ",
-        "name": "VISESH INFOTECNICS",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "780BFL27-N0": {
         "instrument_token": 5949441,
         "exchange_token": "23240",
@@ -85231,20 +84769,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "UEL-BE": {
-        "instrument_token": 6018305,
-        "exchange_token": "23509",
-        "tradingsymbol": "UEL-BE",
-        "name": "UJAAS ENERGY",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.05,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "TARACHAND": {
         "instrument_token": 6019073,
         "exchange_token": "23512",
@@ -85628,20 +85152,6 @@
         "exchange_token": "23578",
         "tradingsymbol": "TCL26-NG",
         "name": "",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "BCG-BZ": {
-        "instrument_token": 6036481,
-        "exchange_token": "23580",
-        "tradingsymbol": "BCG-BZ",
-        "name": "BRIGHTCOM GROUP",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -87499,20 +87009,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "91D290824-TB": {
-        "instrument_token": 6114561,
-        "exchange_token": "23885",
-        "tradingsymbol": "91D290824-TB",
-        "name": "GOI TBILL 91D-29/08/24",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 100,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "182D281124-TB": {
         "instrument_token": 6114817,
         "exchange_token": "23886",
@@ -88909,20 +88405,6 @@
         "strike": 0.0,
         "tick_size": 0.01,
         "lot_size": 100,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "SKIL-BZ": {
-        "instrument_token": 6171393,
-        "exchange_token": "24107",
-        "tradingsymbol": "SKIL-BZ",
-        "name": "SKIL INFRASTRUCTURE",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
         "instrument_type": "EQ",
         "segment": "NSE",
         "exchange": "NSE"
@@ -92049,20 +91531,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "703GS2054-GS": {
-        "instrument_token": 6324737,
-        "exchange_token": "24706",
-        "tradingsymbol": "703GS2054-GS",
-        "name": "GOI LOAN  7.03% 2054",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "RAJINDLTD-SM": {
         "instrument_token": 6324993,
         "exchange_token": "24707",
@@ -93365,11 +92833,95 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
+    "GREEN-RE1-BE": {
+        "instrument_token": 6379009,
+        "exchange_token": "24918",
+        "tradingsymbol": "GREEN-RE1-BE",
+        "name": "ORIENT GREEN POWER CO",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "VINNY-RE-BE": {
+        "instrument_token": 6380289,
+        "exchange_token": "24923",
+        "tradingsymbol": "VINNY-RE-BE",
+        "name": "VINNY OVERSEAS",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
     "ELGIRUBCO-BE": {
         "instrument_token": 6381569,
         "exchange_token": "24928",
         "tradingsymbol": "ELGIRUBCO-BE",
         "name": "ELGI RUBBER CO.",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "GLOBALE-BE": {
+        "instrument_token": 6383105,
+        "exchange_token": "24934",
+        "tradingsymbol": "GLOBALE-BE",
+        "name": "GLOBALE TESSILE",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "MFML-BE": {
+        "instrument_token": 6384385,
+        "exchange_token": "24939",
+        "tradingsymbol": "MFML-BE",
+        "name": "MAHALAXMI FABRIC MILLS LT",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "775LICH29-N0": {
+        "instrument_token": 6385153,
+        "exchange_token": "24942",
+        "tradingsymbol": "775LICH29-N0",
+        "name": "",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "MODEFENCE": {
+        "instrument_token": 6385665,
+        "exchange_token": "24944",
+        "tradingsymbol": "MODEFENCE",
+        "name": "MOTILALAMC - MODEFENCE",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -93393,11 +92945,123 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
+    "709GS2054-GS": {
+        "instrument_token": 6386945,
+        "exchange_token": "24949",
+        "tradingsymbol": "709GS2054-GS",
+        "name": "GOI LOAN  7.09% 2054",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "IDEALTECHO-ST": {
+        "instrument_token": 6388737,
+        "exchange_token": "24956",
+        "tradingsymbol": "IDEALTECHO-ST",
+        "name": "IDEAL TECHNOPLAST IND",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.05,
+        "lot_size": 1000,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "QVCEL-ST": {
+        "instrument_token": 6389761,
+        "exchange_token": "24960",
+        "tradingsymbol": "QVCEL-ST",
+        "name": "QVC EXPORTS",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.05,
+        "lot_size": 1600,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "ORIENTTECH-BE": {
+        "instrument_token": 6390273,
+        "exchange_token": "24962",
+        "tradingsymbol": "ORIENTTECH-BE",
+        "name": "ORIENT TECHNOLOGIES",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "SURAJLTD": {
+        "instrument_token": 6391297,
+        "exchange_token": "24966",
+        "tradingsymbol": "SURAJLTD",
+        "name": "SURAJ",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.05,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
     "WINDMACHIN": {
         "instrument_token": 6392065,
         "exchange_token": "24969",
         "tradingsymbol": "WINDMACHIN",
         "name": "WINDSOR MACHINES",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "73BOB34-N0": {
+        "instrument_token": 6393601,
+        "exchange_token": "24975",
+        "tradingsymbol": "73BOB34-N0",
+        "name": "",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "975SIPL27A-N0": {
+        "instrument_token": 6394113,
+        "exchange_token": "24977",
+        "tradingsymbol": "975SIPL27A-N0",
+        "name": "",
+        "last_price": 0.0,
+        "expiry": "",
+        "strike": 0.0,
+        "tick_size": 0.01,
+        "lot_size": 1,
+        "instrument_type": "EQ",
+        "segment": "NSE",
+        "exchange": "NSE"
+    },
+    "731RECL39-N0": {
+        "instrument_token": 6394625,
+        "exchange_token": "24979",
+        "tradingsymbol": "731RECL39-N0",
+        "name": "",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -93463,10 +93127,10 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "ASAHISONG": {
-        "instrument_token": 6422529,
-        "exchange_token": "25088",
-        "tradingsymbol": "ASAHISONG",
+    "ASAHISONG-BE": {
+        "instrument_token": 6423553,
+        "exchange_token": "25092",
+        "tradingsymbol": "ASAHISONG-BE",
         "name": "ASAHI SONGWON COLOR",
         "last_price": 0.0,
         "expiry": "",
@@ -93477,10 +93141,10 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "BROOKS": {
-        "instrument_token": 6434817,
-        "exchange_token": "25136",
-        "tradingsymbol": "BROOKS",
+    "BROOKS-BE": {
+        "instrument_token": 6435841,
+        "exchange_token": "25140",
+        "tradingsymbol": "BROOKS-BE",
         "name": "BROOKS LAB",
         "last_price": 0.0,
         "expiry": "",
@@ -93939,20 +93603,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "MORARJEE-BE": {
-        "instrument_token": 7393281,
-        "exchange_token": "28880",
-        "tradingsymbol": "MORARJEE-BE",
-        "name": "MORARJEE TEXTILES",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "KITEX": {
         "instrument_token": 7398145,
         "exchange_token": "28899",
@@ -94149,20 +93799,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "ANKITMETAL-BE": {
-        "instrument_token": 7535105,
-        "exchange_token": "29434",
-        "tradingsymbol": "ANKITMETAL-BE",
-        "name": "ANKIT MET & POW",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "NIFTYIETF": {
         "instrument_token": 7565569,
         "exchange_token": "29553",
@@ -94317,20 +93953,6 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "FCONSUMER-BE": {
-        "instrument_token": 7690497,
-        "exchange_token": "30041",
-        "tradingsymbol": "FCONSUMER-BE",
-        "name": "FUTURE CONSUMER",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
     "ORIENTCEM": {
         "instrument_token": 7702785,
         "exchange_token": "30089",
@@ -94392,20 +94014,6 @@
         "exchange_token": "30392",
         "tradingsymbol": "NIF100IETF",
         "name": "ICICI PRUD NIFTY 100 ETF",
-        "last_price": 0.0,
-        "expiry": "",
-        "strike": 0.0,
-        "tick_size": 0.01,
-        "lot_size": 1,
-        "instrument_type": "EQ",
-        "segment": "NSE",
-        "exchange": "NSE"
-    },
-    "NTL-BE": {
-        "instrument_token": 7821825,
-        "exchange_token": "30554",
-        "tradingsymbol": "NTL-BE",
-        "name": "NEUEON TOWERS",
         "last_price": 0.0,
         "expiry": "",
         "strike": 0.0,
@@ -94653,10 +94261,10 @@
         "segment": "NSE",
         "exchange": "NSE"
     },
-    "LYPSAGEMS": {
-        "instrument_token": 8055809,
-        "exchange_token": "31468",
-        "tradingsymbol": "LYPSAGEMS",
+    "LYPSAGEMS-BE": {
+        "instrument_token": 8056833,
+        "exchange_token": "31472",
+        "tradingsymbol": "LYPSAGEMS-BE",
         "name": "LYPSA GEMS & JEWEL",
         "last_price": 0.0,
         "expiry": "",

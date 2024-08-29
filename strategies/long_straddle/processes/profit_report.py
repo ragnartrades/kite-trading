@@ -21,3 +21,5 @@ def generate_trade_report():
 
     print('writing trade report ...')
     TradeReportHandler.write_report(trade_report)
+
+    LiveInfo.trade_state = TradingState.REPORT_COMPLETED

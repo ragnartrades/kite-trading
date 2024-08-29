@@ -51,7 +51,10 @@ def keep_on_checking_for_exit_and_if_possible_do_it():
 
 
 def more_than_max_loss_capping() -> bool:
-    current_profit: float = LiveInfo.current_net_profit()
+    if LiveInfo.tot_ce_pe_ltp is None or LiveInfo.entry_tot_price is None:
+        return False
+
+    current_profit: float = LiveInfo.tot_ce_pe_ltp - LiveInfo.entry_tot_price
 
     if current_profit <= 0 and abs(current_profit) >= strategy_config.MAX_LOSS_PERCENTAGE:
         return True

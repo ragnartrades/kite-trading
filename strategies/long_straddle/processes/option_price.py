@@ -43,14 +43,26 @@ def close_websocket_connection(ws, code, reason):
 
 
 def update_CE_PE_ltp(ws, ticks):
-    option_1_ticker_data: TickerData = ticks[0]
-    option_2_ticker_data: TickerData = ticks[1]
+    if len(ticks) == 1:
+        option_1_ticker_data: TickerData = ticks[0]
 
-    if option_1_ticker_data['instrument_token'] == LiveInfo.ce_instrument_token:
-        LiveInfo.ce_ltp = option_1_ticker_data['last_price']
-        LiveInfo.pe_ltp = option_2_ticker_data['last_price']
-    else:
-        LiveInfo.ce_ltp = option_2_ticker_data['last_price']
-        LiveInfo.pe_ltp = option_1_ticker_data['last_price']
+        update_option_ltp(option_1_ticker_data['instrument_token'],
+                          option_1_ticker_data['last_price'])
+    elif len(ticks) == 2:
+        option_1_ticker_data: TickerData = ticks[0]
+        option_2_ticker_data: TickerData = ticks[1]
 
-    LiveInfo.tot_ce_pe_ltp = LiveInfo.ce_ltp + LiveInfo.pe_ltp
+        update_option_ltp(option_1_ticker_data['instrument_token'],
+                          option_1_ticker_data['last_price'])
+        update_option_ltp(option_2_ticker_data['instrument_token'],
+                          option_2_ticker_data['last_price'])
+
+
+def update_option_ltp(instrument_token: int, last_price: float):
+    if LiveInfo.ce_instrument_token == instrument_token:
+        LiveInfo.ce_ltp = last_price
+    elif LiveInfo.pe_instrument_token == instrument_token:
+        LiveInfo.pe_ltp = last_price
+
+    if LiveInfo.ce_ltp is not None and LiveInfo.pe_ltp is not None:
+        LiveInfo.tot_ce_pe_ltp = LiveInfo.ce_ltp + LiveInfo.pe_ltp
