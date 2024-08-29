@@ -1,5 +1,6 @@
 import time
 
+from strategies.long_straddle import config as strategy_config
 from common.utils import MONTH_NUMBER_TO_OPTION_MONTH_SYMBOL_MAP
 from strategies.long_straddle.classes import TradeExitReason
 from strategies.long_straddle.config import STOCK_NAME
@@ -68,8 +69,7 @@ class StraddlePositionManager:
         year = today_date_time.year
         last_two_digit_in_year = year % 2000
 
-        month_num = today_date_time.month
-        month_str = MONTH_NUMBER_TO_OPTION_MONTH_SYMBOL_MAP[month_num]
+        month_str = strategy_config.TRADING_MONTH
 
         return f'{STOCK_NAME}{last_two_digit_in_year}{month_str}{int(strike_price)}{option_type}'
 
