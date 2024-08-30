@@ -24,7 +24,7 @@ def get_min_tot_ce_pe_price_for_min_profit(
 
 
 def try_setting_initial_Stoploss() -> bool:
-    if LiveInfo.entry_tot_price is None or LiveInfo.tot_ce_pe_ltp:
+    if LiveInfo.entry_tot_price is None or LiveInfo.tot_ce_pe_ltp is None:
         return False
 
     min_ce_pe_price_for_min_profit: float = \

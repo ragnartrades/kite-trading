@@ -56,7 +56,8 @@ def more_than_max_loss_capping() -> bool:
 
     current_profit: float = LiveInfo.tot_ce_pe_ltp - LiveInfo.entry_tot_price
 
-    if current_profit <= 0 and abs(current_profit) >= strategy_config.MAX_LOSS_PERCENTAGE:
+    if (current_profit <= 0 and abs(current_profit)/LiveInfo.entry_tot_price
+            >= strategy_config.MAX_LOSS_PERCENTAGE):
         return True
 
     return False
