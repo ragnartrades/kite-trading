@@ -7,3 +7,4 @@ LONG_STRADDLE_SL_TRAILING_POINT_DIFF = 10  # todo: replace from here to straddle
 LONG_STRADDLE_MIN_PROFIT_PERCENTAGE = 3  # todo: replace from here to straddle config file
 LONG_STRADDLE_LOT_QTY = 1  # todo: replace from here to straddle config file
 
+BANK_NIFTY_TRADING_SYMBOL = 'NIFTY BANK'
