@@ -18,8 +18,8 @@ data_folder_path = f"{backtesting_directory}/data"
 
 
 class Input:
-    START_DATE_TIME = "2024-08-01 09:15:00"
-    END_DATE_TIME = "2024-08-25 15:30:00"
+    START_DATE_TIME = "2024-09-01 09:15:00"
+    END_DATE_TIME = "2024-09-09 15:30:00"
     INTERVAL = 'minute'
 
 
@@ -109,12 +109,21 @@ class OptionDataInput(Input):
 
 
 def GENERATE_CANDLESTICK_DATA_FOR_DATE_RANGE():
-    fresh_create_file_folders()
+    setup_file_folders(should_delete_existing_and_recreate=False)
     generate_banknifty_data_for_all_dates()
     generate_options_data_for_all_dates_for_all_options()
 
 
-def fresh_create_file_folders():
+def delete_root_data_dir_and_recreate():
+    # 2. Delete the existing data folder if it exists
+    if os.path.exists(data_folder_path):
+        shutil.rmtree(data_folder_path)
+
+    # 3. Recreate the data folder
+    os.makedirs(data_folder_path)
+
+
+def setup_file_folders(should_delete_existing_and_recreate: bool):
     global backtesting_directory, data_folder_path
 
     print('deleting and recreating folders and files . . .')
@@ -124,12 +133,8 @@ def fresh_create_file_folders():
     # 1. Define the path to the data folder
     data_folder_path = os.path.join(backtesting_directory, 'data')
 
-    # 2. Delete the existing data folder if it exists
-    if os.path.exists(data_folder_path):
-        shutil.rmtree(data_folder_path)
-
-    # 3. Recreate the data folder
-    os.makedirs(data_folder_path)
+    if should_delete_existing_and_recreate:
+        delete_root_data_dir_and_recreate()
 
     # 4. create all sub folders an files
     dates: List[dict] = get_date_list_for_given_date_range(

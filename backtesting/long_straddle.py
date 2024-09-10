@@ -259,6 +259,7 @@ def calculate_profit_metrics_report(report: Report):
                             2 * (0.234258 * tot_opt_qty) + \
                             (0.109864 * profit_per_unit_option)  # APPROXIMATION
 
+
     tot_basic_profit = tot_opt_qty * report['tot_price_difference_made']
     net_profit = tot_basic_profit - report['tot_charges']
     net_buying_value = tot_opt_qty * report['entry_tot_price']
