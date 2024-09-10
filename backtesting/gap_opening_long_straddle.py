@@ -14,7 +14,7 @@ report_file_path = ('/Users/Subhram/my-projects/kite-trading/backtesting/'
 
 
 class Input:
-    start_date = date(2024, 8, 1)
+    start_date = date(2024, 9, 1)
     end_date = date(2024, 9, 9)
     stock = 'BANKNIFTY'
 
@@ -43,11 +43,19 @@ class Report(TypedDict):
     summary_basic_profit_percentage: float
 
 
+def get_total_fund_required_considering_BTST_margin(report: Report) -> float:
+    fund_during_buying = report['entry_tot_price'] * 1.2
+    extra_margin_during_selling = report['exit_tot_price'] * 0.2
+
+    return fund_during_buying + extra_margin_during_selling
+
+
 def report_to_dict(report: Report) -> dict:
     summary_ce_delta = report['exit_ce_price'] - report['entry_ce_price']
     summary_pe_delta = report['exit_pe_price'] - report['entry_pe_price']
     summary_tot_delta = summary_ce_delta + summary_pe_delta
-    summary_basic_profit_percentage = (summary_tot_delta / report['entry_tot_price']) * 100
+    tot_fund_required = get_total_fund_required_considering_BTST_margin(report)
+    summary_basic_profit_percentage = (summary_tot_delta / tot_fund_required) * 100
 
     return {
         'stock': report['stock'],
@@ -142,7 +150,7 @@ def get_stock_eod_price(cur_date: date) -> float:
 
 def get_suitable_strike_price_from_stock_price(entry_stock_price: float) -> int:
     lower_strike_price = (entry_stock_price // 100) * 100
-    return lower_strike_price
+    # return lower_strike_price
 
     upper_strike_price = lower_strike_price + 100
 
